@@ -1,0 +1,344 @@
+{
+  "_links": {
+    "maven-project": {
+      "href": "http://localhost:8888/sbini/starter.zip?type=maven-project{&dependencies,packaging,javaVersion,language,bootVersion,groupId,artifactId,version,name,description,packageName}",
+      "templated": true
+    },
+    "gradle-project": {
+      "href": "http://localhost:8888/sbini/starter.zip?type=gradle-project{&dependencies,packaging,javaVersion,language,bootVersion,groupId,artifactId,version,name,description,packageName}",
+      "templated": true
+    },
+    "dependencies": {
+      "href": "http://localhost:8888/sbini/dependencies{?bootVersion}",
+      "templated": true
+    }
+  },
+  "dependencies": {
+    "type": "hierarchical-multi-select",
+    "values": [
+      {
+        "name": "Developer Tools",
+        "values": [
+          {
+            "id": "native",
+            "name": "Spring Native [Experimental]"
+          },
+          {
+            "id": "devtools",
+            "name": "Spring Boot DevTools"
+          },
+          {
+            "id": "lombok",
+            "name": "Lombok"
+          },
+          {
+            "id": "configuration-processor",
+            "name": "Spring Configuration Processor"
+          }
+        ]
+      },
+      {
+        "name": "Web",
+        "values": [
+          {
+            "id": "web",
+            "name": "Spring Web"
+          },
+          {
+            "id": "webflux",
+            "name": "Spring Reactive Web"
+          },
+          {
+            "id": "data-rest",
+            "name": "Rest Repositories"
+          },
+          {
+            "id": "web-services",
+            "name": "Spring Web Services"
+          },
+          {
+            "id": "jersey",
+            "name": "Jersey"
+          }
+        ]
+      },
+      {
+        "name": "Template Engines",
+        "values": [
+          {
+            "id": "thymeleaf",
+            "name": "Thymeleaf"
+          },
+          {
+            "id": "freemarker",
+            "name": "Apache Freemarker"
+          },
+          {
+            "id": "mustache",
+            "name": "Mustache"
+          },
+          {
+            "id": "groovy-templates",
+            "name": "Groovy Templates"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "values": [
+          {
+            "id": "security",
+            "name": "Spring Security"
+          }
+        ]
+      },
+      {
+        "name": "SQL",
+        "values": [
+          {
+            "id": "jdbc",
+            "name": "JDBC API"
+          },
+          {
+            "id": "data-jpa",
+            "name": "Spring Data JPA"
+          },
+          {
+            "id": "data-jdbc",
+            "name": "Spring Data JDBC"
+          },
+          {
+            "id": "data-r2dbc",
+            "name": "Spring Data R2DBC"
+          },
+          {
+            "id": "mybatis",
+            "name": "MyBatis Framework"
+          },
+          {
+            "id": "flyway",
+            "name": "Flyway Migration"
+          },
+          {
+            "id": "db2",
+            "name": "IBM DB2 Driver"
+          },
+          {
+            "id": "h2",
+            "name": "H2 Database"
+          },
+          {
+            "id": "hsql",
+            "name": "HyperSQL Database"
+          },
+          {
+            "id": "sqlserver",
+            "name": "MS SQL Server Driver"
+          },
+          {
+            "id": "mysql",
+            "name": "MySQL Driver"
+          },
+          {
+            "id": "postgresql",
+            "name": "PostgreSQL Driver"
+          }
+        ]
+      },
+      {
+        "name": "NoSQL",
+        "values": [
+          {
+            "id": "data-mongodb",
+            "name": "Spring Data MongoDB"
+          },
+          {
+            "id": "data-mongodb-reactive",
+            "name": "Spring Data Reactive MongoDB"
+          }
+        ]
+      },
+      {
+        "name": "Messaging",
+        "values": [
+          {
+            "id": "integration",
+            "name": "Spring Integration"
+          },
+          {
+            "id": "amqp",
+            "name": "Spring for RabbitMQ"
+          },
+          {
+            "id": "kafka",
+            "name": "Spring for Apache Kafka"
+          },
+          {
+            "id": "kafka-streams",
+            "name": "Spring for Apache Kafka Streams"
+          },
+          {
+            "id": "activemq",
+            "name": "Spring for Apache ActiveMQ 5"
+          },
+          {
+            "id": "websocket",
+            "name": "WebSocket"
+          }
+        ]
+      },
+      {
+        "name": "I/O",
+        "values": [
+          {
+            "id": "batch",
+            "name": "Spring Batch"
+          },
+          {
+            "id": "validation",
+            "name": "Validation"
+          },
+          {
+            "id": "mail",
+            "name": "Java Mail Sender"
+          },
+          {
+            "id": "quartz",
+            "name": "Quartz Scheduler"
+          },
+          {
+            "id": "cache",
+            "name": "Spring cache abstraction"
+          }
+        ]
+      },
+      {
+        "name": "Ops",
+        "values": [
+          {
+            "id": "actuator",
+            "name": "Spring Boot Actuator"
+          }
+        ]
+      }
+    ]
+  },
+  "type": {
+    "type": "action",
+    "default": "maven-project",
+    "values": [
+      {
+        "id": "maven-project",
+        "name": "maven - the best ever",
+        "description": "Maven-based project",
+        "action": "/starter.zip",
+        "tags": {
+          "build": "maven",
+          "format": "project"
+        }
+      },
+      {
+        "id": "gradle-project",
+        "name": "gradle - avoid using it",
+        "description": "Gradle-based project",
+        "action": "/starter.zip",
+        "tags": {
+          "build": "gradle",
+          "format": "project"
+        }
+      }
+    ]
+  },
+  "packaging": {
+    "type": "single-select",
+    "default": "jar",
+    "values": [
+      {
+        "id": "jar",
+        "name": "no choice just jar"
+      }
+    ]
+  },
+  "javaVersion": {
+    "type": "single-select",
+    "default": "1.8",
+    "values": [
+      {
+        "id": "11",
+        "name": "11"
+      },
+      {
+        "id": "1.8",
+        "name": "1.8"
+      }
+    ]
+  },
+  "language": {
+    "type": "single-select",
+    "default": "java",
+    "values": [
+      {
+        "id": "java",
+        "name": "preferrable"
+      },
+      {
+        "id": "kotlin",
+        "name": "slow"
+      }
+    ]
+  },
+  "bootVersion": {
+    "type": "single-select",
+    "default": "2.4.4.RELEASE",
+    "values": [
+      {
+        "id": "2.5.0.BUILD-SNAPSHOT",
+        "name": "2.5.0 (SNAPSHOT)"
+      },
+      {
+        "id": "2.5.0.M3",
+        "name": "2.5.0 (M3)"
+      },
+      {
+        "id": "2.4.5.BUILD-SNAPSHOT",
+        "name": "2.4.5 (SNAPSHOT)"
+      },
+      {
+        "id": "2.4.4.RELEASE",
+        "name": "2.4.4"
+      },
+      {
+        "id": "2.3.10.BUILD-SNAPSHOT",
+        "name": "2.3.10 (SNAPSHOT)"
+      },
+      {
+        "id": "2.3.9.RELEASE",
+        "name": "2.3.9"
+      }
+    ]
+  },
+  "groupId": {
+    "type": "text",
+    "default": "com.mytests.spring"
+  },
+  "artifactId": {
+    "type": "text",
+    "default": "my-app"
+  },
+  "version": {
+    "type": "text",
+    "default": "1.0.0"
+  },
+  "name": {
+    "type": "text",
+    "default": "demo"
+  },
+  "description": {
+    "type": "text",
+    "default": "my test SB application"
+  },
+  "packageName": {
+    "type": "text",
+    "default": "com.mytests.spring.myapp"
+  }
+}

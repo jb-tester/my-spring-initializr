@@ -1,0 +1,183 @@
+initializr:
+  javaVersions:
+    - id: 11
+      default: false
+    - id: 1.8
+      default: true
+  languages:
+    - name: preferrable
+      id: java
+      default: true
+    - name: slow
+      id: kotlin
+      default: false
+  types:
+    - name: maven - the best ever
+      id: maven-project
+      description: Maven-based project 
+      tags:
+        build: maven
+        format: project
+      default: true
+      action: /starter.zip
+    - name: gradle - avoid using it
+      id: gradle-project
+      description: Gradle-based project
+      tags:
+        build: gradle
+        format: project
+      default: false
+      action: /starter.zip
+  packagings:
+    - name: no choice just jar
+      id: jar
+      default: true
+  bootVersions:
+    - id: 2.5.0-SNAPSHOT
+      name: 2.5.0 (SNAPSHOT)
+      default: false
+    - id: 2.5.0-M3
+      name: 2.5.0 (M3)
+      default: false
+    - id: 2.4.5-SNAPSHOT
+      name: 2.4.5 (SNAPSHOT)
+      default: false
+    - id: 2.4.4
+      name: 2.4.4
+      default: true
+    - id: 2.3.10.BUILD-SNAPSHOT
+      name: 2.3.10 (SNAPSHOT)
+      default: false
+    - id: 2.3.9.RELEASE
+      name: 2.3.9
+      default: false
+  group-id:
+    value: com.mytests.spring
+  artifact-id:
+    value: my-app
+  version:
+    value: 1.0.0
+  description:
+    value: my test SB application
+  dependencies:
+    - name: Developer Tools
+      content:
+        - id: native
+          name: 'Spring Native [Experimental]'
+
+        - id: devtools
+          name: Spring Boot DevTools
+
+        - id: lombok
+          name: Lombok
+
+        - id: configuration-processor
+          name: Spring Configuration Processor
+          groupId: org.springframework.boot
+          artifactId: spring-boot-configuration-processor
+    - name: Web
+      content:
+        - id: web
+          name: Spring Web
+
+        - id: webflux
+          name: Spring Reactive Web
+
+        - id: data-rest
+          name: Rest Repositories
+
+        - id: web-services
+          name: Spring Web Services
+
+        - id: jersey
+          name: Jersey
+
+    - name: Template Engines
+      content:
+        - id: thymeleaf
+          name: Thymeleaf
+
+        - id: freemarker
+          name: Apache Freemarker
+
+        - id: mustache
+          name: Mustache
+
+        - id: groovy-templates
+          name: Groovy Templates
+
+    - name: Security
+      content:
+        - id: security
+          name: Spring Security
+
+
+    - name: SQL
+      content:
+        - id: jdbc
+          name: JDBC API
+        - id: data-jpa
+          name: Spring Data JPA
+        - id: data-jdbc
+          name: Spring Data JDBC
+        - id: data-r2dbc
+          name: Spring Data R2DBC
+        - id: mybatis
+          name: MyBatis Framework
+        - id: flyway
+          name: Flyway Migration
+
+        - id: db2
+          name: IBM DB2 Driver
+        - id: h2
+          name: H2 Database
+        - id: hsql
+          name: HyperSQL Database
+        - id: sqlserver
+          name: MS SQL Server Driver
+        - id: mysql
+          name: MySQL Driver
+        - id: postgresql
+          name: PostgreSQL Driver
+    - name: NoSQL
+      content:
+        - id: data-mongodb
+          name: Spring Data MongoDB
+
+        - id: data-mongodb-reactive
+          name: Spring Data Reactive MongoDB
+
+    - name: Messaging
+      content:
+        - id: integration
+          name: Spring Integration
+        - id: amqp
+          name: Spring for RabbitMQ
+        - id: kafka
+          name: Spring for Apache Kafka
+        - id: kafka-streams
+          name: Spring for Apache Kafka Streams
+        - id: activemq
+          name: Spring for Apache ActiveMQ 5
+        - id: websocket
+          name: WebSocket
+    - name: I/O
+      content:
+        - id: batch
+          name: Spring Batch
+        - id: validation
+          name: Validation
+        - id: mail
+          name: Java Mail Sender
+        - id: quartz
+          name: Quartz Scheduler
+        - id: cache
+          name: Spring cache abstraction
+    - name: Ops
+      content:
+        - id: actuator
+          name: Spring Boot Actuator
+server:
+  port: 8888
+  servlet:
+    context-path: /sbini
